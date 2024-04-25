@@ -9,6 +9,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
+<<<<<<< HEAD
   // Initialize an empty array to store the result
   const result = [];
 
@@ -19,6 +20,14 @@ const raisedToTheThird = (arr) => {
   });
 
   // Return the array containing numbers raised to the power of 3
+=======
+  const result = [];
+
+  arr.forEach(number => {
+    result.push(Math.pow(number, 3));
+  });
+
+>>>>>>> 10ea5229772ab30fc150e5b7d4d11272caaaa60f
   return result;
 };
 
@@ -27,10 +36,24 @@ CHALLENGE 2
 
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
+<<<<<<< HEAD
 
 const addOne = (arr) => {
   // Use the map method to iterate over each element in the array and increment by 1
   return arr.map(number => number + 1);
+=======
+// [2, 3, 5, 11]
+
+
+const addOne = (arr) => {
+  const result = [];
+
+  arr.map(number => {
+    result.push(number + 1);
+  });
+
+  return result;
+>>>>>>> 10ea5229772ab30fc150e5b7d4d11272caaaa60f
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,10 +61,23 @@ CHALLENGE 3
 
 Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character.
 ------------------------------------------------------------------------------------------------ */
+<<<<<<< HEAD
 
 const addQuestion = (arr) => {
   // Use the map method to iterate over each element in the array and append a question mark
   return arr.map(string => string + '?');
+=======
+// ['hello', '301', 'students']
+
+const addQuestion = (arr) => {
+  const result = [];
+
+  arr.map(string => {
+    result.push(string + '?');
+  });
+
+  return result;
+>>>>>>> 10ea5229772ab30fc150e5b7d4d11272caaaa60f
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,18 +89,23 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
+//[0, 4, 5]
 
 const forLoopTwoToThe = (arr) => {
   const result = [];
+  for (let index in arr) {
 
-  // Iterate over each element in the input array using a for loop
-  for (let i = 0; i < arr.length; i++) {
-    // Calculate 2 raised to the power of the current element and push the result to the result array
-    result.push(Math.pow(2, arr[i]));
+    result.push(
+      Math.pow(2, arr[index])
+    );
+
   }
 
   return result;
+
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -89,10 +130,35 @@ CHALLENGE 6
 
 Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4 and your forEachTwoToThe function from challenge 5, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
+//const forLoopTwoToThe = (arr) => {
+//   const result = [];
+//   for (let index in arr) {
+
+//     result.push(
+//       Math.pow(2, arr[index])
+//     );
+
+//   }
+
+//   return result;
+
+// };
+
 
 const mapTwoToThe = (arr) => {
-  // Use the map method to create a new array by mapping each element to its result
-  return arr.map(number => Math.pow(2, number));
+  const result = [];
+  //
+  arr.map(number => {
+
+    result.push(
+      Math.pow(2, number)
+    );
+
+  });
+
+
+  return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

@@ -8,13 +8,19 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
+// addOne([1, 2, 3, 4, 5])).toStrictEqual([2, 3, 4, 5, 6]);
+
 const addOne = (arr) => {
   // Solution code here...
-  let resultsArr = [];
-  arr.forEach(num => {
-    resultsArr.push(num + 1);
+  let resultsArray = [];
+
+  arr.forEach(indexNum => {
+    let incrementedNum = indexNum + 1;
+    resultsArray.push(incrementedNum);
   });
-  return resultsArr;
+
+
+  return resultsArray;
 };
 
 
@@ -26,14 +32,15 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
+//['hi', 'how', 'are', 'you']
 const addExclamation = (arr) => {
   // Solution code here...
-  const resultsArr = [];
-  arr.forEach(string => {
-    resultsArr.push(string + "!");
+  let resultsArray = []
+  arr.forEach(indexString => {
+    let newString = indexString +'!';
+    resultsArray.push(newString);
   });
-
-  return resultsArr;
+  return resultsArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,22 +50,16 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
+// ['hi', 'how', 'are', 'you']
 
 const allUpperCase = (inputArr) => {
   // Solution code here...
-  let outputArr=[];
-
-  inputArr.forEach(i=>{
-
-    let uppercaseWord = i.toUpperCase();
-    outputArr.push(uppercaseWord);
-  }
-
-  );
-
-
-
-  return outputArr;
+  let resultsArray = [];
+  inputArr.forEach(indexString => {
+    let newString = indexString.toUpperCase();
+    resultsArray.push(newString);
+  });
+  return resultsArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,25 +71,12 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
+//
+
 
 const greeting = (word) => {
   // Solution code here...
-  let wordExclaimed=word.toUpperCase()+"!";
-  return wordExclaimed;
-};
 
-// let words = ["hello", "301", "students"]
-// callback = greeting
-// let newArr=['HELLO!', '301!', 'STUDENTS!']
-const speaker = (words, callback) => {
-  // Solution code here...
-  let newArr=[];
-  words.forEach(i=>{
-
-    let changeWord = callback(i);
-    newArr.push(changeWord);
-  });
-  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,14 +96,11 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  arr.push(value);
+
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  for (let i = 0; i < times; i++) {
-    callback(arr, num);
-  }
-  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,13 +122,7 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  const groceryList = [];
-  availableItems.forEach(item => {
-    if (item.available) {
-      groceryList.push(item.name);
-    }
-  });
-  return groceryList;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

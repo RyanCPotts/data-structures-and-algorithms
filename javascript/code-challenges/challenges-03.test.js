@@ -46,10 +46,10 @@ Write a function named oddValues that, given an array of integers as input, uses
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const containsAnd = (arr) => {
-  return arr.filter(item => item.includes('and'));
+function oddValues(arr) {
+    // Use filter to return an array containing only the odd integers
+    return arr.filter(num => num % 2 !== 0);
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 

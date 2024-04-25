@@ -12,7 +12,7 @@ const stuff = {
   toys: 57,
   toothbrush: 'frayed',
   cars: ['Toyota', 'Mazda']
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -28,17 +28,11 @@ Prove that the original people array is unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const addPeople = (arr) => {
-  // Create a copy of the people array using spread operator
-  const newArr = [...arr];
+  let newNames = ['Odie', ...arr,'Garfield'];
 
-  // Add 'Odie' to the beginning of the array
-  newArr.unshift('Odie');
+  return newNames;
 
-  // Add 'Garfield' to the end of the array
-  newArr.push('Garfield');
-
-  // Return the new array
-  return newArr;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
