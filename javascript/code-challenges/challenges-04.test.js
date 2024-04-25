@@ -28,7 +28,17 @@ Prove that the original people array is unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const addPeople = (arr) => {
-  // Solution code here...
+  // Create a copy of the people array using spread operator
+  const newArr = [...arr];
+
+  // Add 'Odie' to the beginning of the array
+  newArr.unshift('Odie');
+
+  // Add 'Garfield' to the end of the array
+  newArr.push('Garfield');
+
+  // Return the new array
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +55,12 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const setState = (arr, obj) => {
-  // Solution code here...
+  // Create copies of the people array and stuff object using spread operator
+  const peopleCopy = [...arr];
+  const stuffCopy = {...obj};
+
+  // Create and return a state object with the copied arrays and object
+  return { people: peopleCopy, stuff: stuffCopy };
 };
 
 
@@ -66,7 +81,21 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr, obj) => {
-  // Solution code here...
+  // Create copies of the people array and stuff object using spread operator
+  const peopleCopy = [...arr];
+  const stuffCopy = {...obj};
+
+  // Add a new car ("Ford") to the copied stuff object's cars array
+  const updatedCars = [...stuffCopy.cars, "Ford"];
+
+  // Change the toothbrush from "frayed" to "brand new" in the copied stuff object
+  const updatedStuff = {...stuffCopy, toothbrush: "brand new"};
+
+  // Add 1 to the number of toys in the copied stuff object
+  const updatedToys = stuffCopy.toys + 1;
+
+  // Create and return a state object with the copied arrays and updated object properties
+  return { people: peopleCopy, stuff: {...updatedStuff, cars: updatedCars, toys: updatedToys} };
 };
 
 

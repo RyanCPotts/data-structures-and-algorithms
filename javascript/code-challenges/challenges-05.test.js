@@ -8,7 +8,19 @@ Write a function that finds the maximum value in an array.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+  if (arr.length === 0) {
+    return undefined; // Return undefined for an empty array
+  }
+
+  let max = arr[0]; // Assume the first element is the maximum
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]; // Update max if a larger value is found
+    }
+  }
+
+  return max; // Return the maximum value
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,7 +36,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +48,11 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  // Extract the values of the object
+  const values = Object.values(obj);
+
+  // Check if the specified value exists in the values array
+  return values.includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +75,19 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  const updatedData = [];
+
+  // Iterate over the keys and values of the object
+  for (const [name, number] of Object.entries(obj)) {
+    // Format each entry into the required string format
+    const formattedEntry = `${name}: ${number}`;
+
+    // Push the formatted entry into the updatedData array
+    updatedData.push(formattedEntry);
+  }
+
+  // Return the updatedData array
+  return updatedData;
 };
 
 
@@ -115,10 +143,19 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+
+  // Iterate over each character object in the array
+  arr.forEach(character => {
+    // Check if the character object has a 'house' property
+    if (character.house) {
+      // Add the house name to the houses array
+      houses.push(character.house);
+    }
+  });
+
+  // Return the array containing the names of all the houses
   return houses;
 };
-
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -132,8 +169,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  // Find the character object with the given name in the array
+  const characterObj = arr.find(obj => obj.name === character);
 
+  // If the character object is found and it has a 'children' property, return true
+  if (characterObj && 'children' in characterObj) {
+    return true;
+  }
+
+  // If the character object is not found or it doesn't have a 'children' property, return false
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,7 +190,21 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  // Find the character object with the given name in the array
+  const characterObj = arr.find(obj => obj.name === character);
+
+  // If the character object is found, iterate over its entries
+  if (characterObj) {
+    for (const [key, value] of Object.entries(characterObj)) {
+      // If the key is 'children', return true
+      if (key === 'children') {
+        return true;
+      }
+    }
+  }
+
+  // If the character object is not found or it doesn't have a 'children' key, return false
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
