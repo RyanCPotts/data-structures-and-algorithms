@@ -1,1 +1,1 @@
-# Blog Notes: Merge Sort
+# Placeholder: Code Challenge 27
