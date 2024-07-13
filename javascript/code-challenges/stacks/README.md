@@ -19,13 +19,22 @@ The PseudoQueue class uses two stacks (`stack1` and `stack2`) to manage enqueue 
 ## Link to Code
 - [PseudoQueue.js](./PseudoQueue.js)
 - [Stack.js](./Stack.js)
+---------------------------------
+|           Stack               |
+---------------------------------
+| - items: array                |
+---------------------------------
+| + push(element: any): void    |
+| + pop(): any                  |
+| + peek(): any                 |
+| + isEmpty(): boolean          |
+---------------------------------
 
---------------------------------------
-|            PseudoQueue             |
---------------------------------------
-| - stack1: Stack                    |
-| - stack2: Stack                    |
---------------------------------------
-| + enqueue(value: any): void        |
-| + dequeue(): any                   |
---------------------------------------
+---------------------------------
+|      validateBrackets         |
+---------------------------------
+| - stack: Stack                |
+| - brackets: object            |
+---------------------------------
+| + validateBrackets(string: string): boolean |
+---------------------------------
