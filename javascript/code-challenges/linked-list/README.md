@@ -1,15 +1,13 @@
-# Linked List Insertions
+# k-th Value from End of Linked List
 
 ## Challenge Summary
-Extend a Linked List to allow various insertion methods.
+Find the k-th value from the end of a linked list.
 
 ## Challenge Description
-Implement methods for appending, inserting before, and inserting after nodes in a linked list.
+Implement a method for returning the node’s value that is k places from the tail of the linked list.
 
 ## Approach & Efficiency
-- **Append**: O(n)
-- **Insert Before**: O(n)
-- **Insert After**: O(n)
+- **kthFromEnd**: O(n)
 
 ## Solution
 
@@ -26,4 +24,5 @@ Implement methods for appending, inserting before, and inserting after nodes in 
 | + append(value)          |
 | + insertBefore(value, newValue) |
 | + insertAfter(value, newValue)  |
+| + kthFromEnd(k): any     |
 +--------------------+     +--------------------+

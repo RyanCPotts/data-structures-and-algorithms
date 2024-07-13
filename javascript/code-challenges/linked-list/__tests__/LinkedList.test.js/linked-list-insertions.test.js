@@ -1,4 +1,4 @@
-const LinkedList = require('../path-to-your-linked-list-file');
+const LinkedList = require('../LinkedList.js');
 
 describe('LinkedList', () => {
   it('can successfully add a node to the end of the linked list', () => {
