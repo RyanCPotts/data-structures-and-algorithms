@@ -1,31 +1,29 @@
-# Linked List
+# Linked List Insertions
 
-## Summary
-Implementation of a singly linked list.
+## Challenge Summary
+Extend a Linked List to allow various insertion methods.
 
-## Description
-This implementation includes methods to insert nodes, check for the existence of a value, and convert the list to a string representation.
+## Challenge Description
+Implement methods for appending, inserting before, and inserting after nodes in a linked list.
 
 ## Approach & Efficiency
-- Insert: O(1)
-- Includes: O(n)
-- ToString: O(n)
+- **Append**: O(n)
+- **Insert Before**: O(n)
+- **Insert After**: O(n)
 
+## Solution
 
-
-+-----------------+
-|     Node        |
-+-----------------+
-| - value: any    |
-| - next: Node    |
-+-----------------+
-
-+-----------------------+
-|     LinkedList        |
-+-----------------------+
-| - head: Node          |
-+-----------------------+
-| + insert(value: any): void |
-| + includes(value: any): boolean |
-| + toString(): string   |
-+-----------------------+
+### UML Diagram
+```plaintext
++--------------------+     +--------------------+
+|      LinkedList    |     |        Node        |
++--------------------+     +--------------------+
+| - head: Node       |     | - value: any       |
++--------------------+     | - next: Node       |
+| + insert(value)    |     +--------------------+
+| + includes(value): Boolean |
+| + toString(): String     |
+| + append(value)          |
+| + insertBefore(value, newValue) |
+| + insertAfter(value, newValue)  |
++--------------------+     +--------------------+
