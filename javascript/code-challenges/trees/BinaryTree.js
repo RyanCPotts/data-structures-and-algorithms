@@ -40,3 +40,5 @@ class BinaryTree {
     return result;
   }
 }
+
+module.exports = {BinaryTree};
