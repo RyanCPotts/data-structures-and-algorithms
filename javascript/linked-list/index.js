@@ -44,6 +44,37 @@ class LinkedList {
     list = list + 'NULL';
     return list;
   }
+
+  linkedListZip(ll1, ll2) {
+    if (ll1.head === null && ll2.head === null) {
+      return null;
+    }
+    else if (ll1.head === null) {
+      return ll2;
+    }
+    else if (ll2.head === null) {
+      return ll1;
+    }
+
+    const newLL = new LinkedList();
+    let current1 = ll1.head;
+    let current2 = ll2.head;
+
+    while (current1 || current2) {
+      if (current1) {
+        newLL.append(current1.value);
+        current1 = current1.next;
+      }
+      if (current2) {
+        newLL.append(current2.value);
+        current2 = current2.next;
+      }
+    }
+    return newLL;
+  }
+
+
+
 }
 
 module.exports = LinkedList;
